@@ -35,7 +35,7 @@ export default function Dashboard() {
   const [pageToRender, setPageToRender] = useState("dashboard");
   return (
     <div className="flex w-full h-full">
-      <Sidebar pageFunc={setPageToRender} />
+      <Sidebar activePage={pageToRender} pageFunc={setPageToRender} />
       {renderDashPage(pageToRender)}
     </div>
   );
